@@ -3,18 +3,18 @@ import { data } from "@/lib/data";
 import { Program } from "../types/program.type";
 
 export async function getPrograms(): Promise<Program[]> {
-   return data.programs.map((program) => ({
-      id: program.id,
-      slug: program.slug,
-      title: program.title,
-      githubPath: program.githubPath,
+  return data.programs.map((program) => ({
+    id: program.id,
+    slug: program.slug,
+    title: program.title,
+    githubPath: program.githubPath,
 
-      description: "",
-      level: "",
+    description: "",
+    level: "",
 
-      modules: [],
+    modules: [],
 
-      createdAt: "",
-      updatedAt: "",
-   }));
+    createdAt: "",
+    updatedAt: "",
+  }));
 }
