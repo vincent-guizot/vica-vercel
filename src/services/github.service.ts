@@ -1,11 +1,6 @@
 import axios from "@/lib/axios";
 import { cache } from "react";
-
-const GITHUB_OWNER = process.env.NEXT_PUBLIC_GITHUB_OWNER!;
-const GITHUB_REPO = process.env.NEXT_PUBLIC_GITHUB_REPO!;
-const GITHUB_BRANCH = process.env.NEXT_PUBLIC_GITHUB_BRANCH || "main";
-
-const BASE_URL = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents`;
+import { BASE_URL, GITHUB_BRANCH, GITHUB_OWNER, GITHUB_REPO } from "./constant";
 
 class GithubService {
   private static request = cache(async (path = "") => {
