@@ -11,6 +11,8 @@ import AssignmentGrid from "@/features/assignments/components/AssignmentGrid";
 import ResourceGrid from "@/features/resources/components/ResourceGrid";
 
 import { Module } from "@/features/modules/types/module.type";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 interface ModuleContentProps {
   module: Module;
@@ -48,7 +50,7 @@ export default function ModuleContent({ module }: ModuleContentProps) {
         ]}
       />
 
-      <Tabs defaultValue="lessons" className="w-full">
+      <Tabs defaultValue="assignments" className="w-full">
         <TabsList
           className="
             mb-6
@@ -57,12 +59,12 @@ export default function ModuleContent({ module }: ModuleContentProps) {
             grid-cols-3
           "
         >
-          <TabsTrigger value="lessons">
-            Lessons ({module.lessons?.length ?? 0})
-          </TabsTrigger>
-
           <TabsTrigger value="assignments">
             Assignments ({module.assignments?.length ?? 0})
+          </TabsTrigger>
+
+          <TabsTrigger value="lessons">
+            Lessons ({module.lessons?.length ?? 0})
           </TabsTrigger>
 
           <TabsTrigger value="resources">
@@ -80,6 +82,25 @@ export default function ModuleContent({ module }: ModuleContentProps) {
 
         <TabsContent value="resources">
           <ResourceGrid resources={module.resources ?? []} />
+
+          <div className="mt-6 flex items-center justify-between">
+            <Button
+              variant="outline"
+              className="gap-2"
+              onClick={() => {
+                module.resources?.forEach((resource, index) => {
+                  if (!resource.downloadUrl) return;
+
+                  setTimeout(() => {
+                    window.open(resource.downloadUrl, "_blank");
+                  }, index * 250);
+                });
+              }}
+            >
+              <Download className="h-4 w-4" />
+              Download All
+            </Button>
+          </div>
         </TabsContent>
       </Tabs>
     </motion.div>
