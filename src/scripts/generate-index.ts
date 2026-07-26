@@ -4,214 +4,176 @@ import path from "path";
 import dotenv from "dotenv";
 
 dotenv.config({
-   path: ".env.local",
+  path: ".env.local",
 });
 
-function slugify(text: string) {
-   return text
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, "")
-      .replace(/\s+/g, "-");
-}
+import slugify from "../utils/slugify";
+
+import type {
+  Assignment,
+  GithubItem,
+  IndexData,
+  Lesson,
+  Module,
+  Program,
+  Resource,
+} from "./types";
 
 async function generate() {
-   const { default: GithubService } = await import(
-      "../services/github.service"
-   );
+  console.log("");
+  console.log("========================================");
+  console.log("🚀 VICA Index Generator");
+  console.log("========================================");
+  console.log("");
 
-   const programs: any[] = [];
-   const modules: any[] = [];
-   const lessons: any[] = [];
-   const assignments: any[] = [];
-   const resources: any[] = [];
+  const { default: GithubService } = await import("../services/github.service");
 
-   const githubPrograms =
-      await GithubService.getPrograms();
+  const programs: Program[] = [];
+  const modules: Module[] = [];
+  const lessons: Lesson[] = [];
+  const assignments: Assignment[] = [];
+  const resources: Resource[] = [];
 
-   const programFolders =
-      githubPrograms.filter(
-         (item: any) =>
-            item.type === "dir",
-      );
+  console.log("📦 Fetching API...");
 
-   for (const program of programFolders) {
-      const programSlug = slugify(
-         program.name,
-      );
+  const githubPrograms = (await GithubService.getPrograms()) as GithubItem[];
 
-      programs.push({
-         id: programSlug,
-         slug: programSlug,
-         title: program.name,
-         githubPath: program.path,
+  const programFolders = githubPrograms.filter((item) => item.type === "dir");
+
+  for (const program of programFolders) {
+    const programSlug = slugify(program.name);
+
+    programs.push({
+      id: programSlug,
+      slug: programSlug,
+      title: program.name,
+      githubPath: program.path,
+    });
+
+    let githubModules: GithubItem[];
+
+    try {
+      githubModules = (await GithubService.getModules(
+        program.name,
+      )) as GithubItem[];
+    } catch {
+      continue;
+    }
+
+    const moduleFolders = githubModules.filter((item) => item.type === "dir");
+
+    for (const module of moduleFolders) {
+      const moduleSlug = `${programSlug}-${slugify(module.name)}`;
+
+      modules.push({
+        id: moduleSlug,
+        slug: moduleSlug,
+        title: module.name,
+        programSlug,
+        githubPath: module.path,
       });
 
-      let githubModules: any[] = [];
+      try {
+        const lessonFolders = (await GithubService.getLessons(
+          program.name,
+          module.name,
+        )) as GithubItem[];
+
+        lessons.push(
+          ...lessonFolders
+            .filter((item) => item.type === "dir")
+            .map(
+              (item): Lesson => ({
+                id: `${moduleSlug}-${slugify(item.name)}`,
+                slug: `${moduleSlug}-${slugify(item.name)}`,
+                title: item.name,
+                programSlug,
+                moduleSlug,
+                githubPath: item.path,
+              }),
+            ),
+        );
+      } catch {}
 
       try {
-         githubModules =
-            await GithubService.getModules(
-               program.name,
-            );
-      } catch {
-         continue;
-      }
+        const assignmentFolders = (await GithubService.getAssignments(
+          program.name,
+          module.name,
+        )) as GithubItem[];
 
-      const moduleFolders =
-         githubModules.filter(
-            (item: any) =>
-               item.type === "dir",
-         );
+        assignments.push(
+          ...assignmentFolders
+            .filter((item) => item.type === "dir")
+            .map(
+              (item): Assignment => ({
+                id: `${moduleSlug}-${slugify(item.name)}`,
+                slug: `${moduleSlug}-${slugify(item.name)}`,
+                title: item.name,
+                programSlug,
+                moduleSlug,
+                githubPath: item.path,
+              }),
+            ),
+        );
+      } catch {}
 
-      for (const module of moduleFolders) {
-         const moduleSlug = `${programSlug}-${slugify(module.name)}`;
+      try {
+        const resourceFiles = (await GithubService.getResources(
+          program.name,
+          module.name,
+        )) as GithubItem[];
 
-         modules.push({
-            id: moduleSlug,
-            slug: moduleSlug,
-            title: module.name,
-            programSlug,
-            githubPath: module.path,
-         });
+        resources.push(
+          ...resourceFiles
+            .filter((item) => item.type === "file")
+            .map(
+              (item): Resource => ({
+                id: slugify(item.path),
+                slug: slugify(item.path),
+                title: item.name,
+                programSlug,
+                moduleSlug,
+                githubPath: item.path,
+                downloadUrl: item.download_url ?? null,
+              }),
+            ),
+        );
+      } catch {}
+    }
+  }
 
-         try {
-            const lessonFolders =
-               await GithubService.getLessons(
-                  program.name,
-                  module.name,
-               );
+  const output: IndexData = {
+    programs,
+    modules,
+    lessons,
+    assignments,
+    resources,
+  };
 
-            lessons.push(
-               ...lessonFolders
-                  .filter(
-                     (item: any) =>
-                        item.type === "dir",
-                  )
-                  .map((item: any) => ({
-                     id: `${moduleSlug}-${slugify(item.name)}`,
-                     slug: `${moduleSlug}-${slugify(item.name)}`,
-                     title: item.name,
-                     programSlug,
-                     moduleSlug,
-                     githubPath: item.path,
-                  })),
-            );
-         } catch { }
+  const outputDir = path.join(process.cwd(), "src", "data");
 
-         try {
-            const assignmentFolders =
-               await GithubService.getAssignments(
-                  program.name,
-                  module.name,
-               );
+  await fs.mkdir(outputDir, {
+    recursive: true,
+  });
 
-            assignments.push(
-               ...assignmentFolders
-                  .filter(
-                     (item: any) =>
-                        item.type === "dir",
-                  )
-                  .map((item: any) => ({
-                     id: `${moduleSlug}-${slugify(item.name)}`,
-                     slug: `${moduleSlug}-${slugify(item.name)}`,
-                     title: item.name,
-                     programSlug,
-                     moduleSlug,
-                     githubPath: item.path,
-                  })),
-            );
-         } catch { }
+  await fs.writeFile(
+    path.join(outputDir, "index.json"),
+    JSON.stringify(output, null, 2),
+  );
 
-         try {
-            const resourceFiles =
-               await GithubService.getResources(
-                  program.name,
-                  module.name,
-               );
+  console.log("✅ index.json generated");
 
-            resources.push(
-               ...resourceFiles
-                  .filter(
-                     (item: any) =>
-                        item.type === "file",
-                  )
-                  .map((item: any) => ({
-                     id: slugify(item.path),
-
-                     slug: slugify(item.path),
-
-                     title: item.name,
-
-                     programSlug,
-
-                     moduleSlug,
-
-                     githubPath:
-                        item.path,
-
-                     downloadUrl:
-                        item.download_url,
-                  })),
-            );
-         } catch { }
-      }
-   }
-
-   const output = {
-      programs,
-      modules,
-      lessons,
-      assignments,
-      resources,
-   };
-
-   const outputDir = path.join(
-      process.cwd(),
-      "src",
-      "data",
-   );
-
-   await fs.mkdir(
-      outputDir,
-      {
-         recursive: true,
-      },
-   );
-
-   const outputPath = path.join(
-      outputDir,
-      "index.json",
-   );
-
-   await fs.writeFile(
-      outputPath,
-      JSON.stringify(
-         output,
-         null,
-         2,
-      ),
-   );
-
-   console.log(
-      "✅ index.json generated",
-   );
-
-   console.log({
-      programs:
-         programs.length,
-
-      modules:
-         modules.length,
-
-      lessons:
-         lessons.length,
-
-      assignments:
-         assignments.length,
-
-      resources:
-         resources.length,
-   });
+  console.table({
+    Programs: programs.length,
+    Modules: modules.length,
+    Lessons: lessons.length,
+    Assignments: assignments.length,
+    Resources: resources.length,
+  });
 }
 
-generate().catch(console.error);
+generate().catch((error) => {
+  console.error("❌ Failed to generate index.json");
+  console.error(error);
+  process.exit(1);
+});
