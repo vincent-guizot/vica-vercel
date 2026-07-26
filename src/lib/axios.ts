@@ -1,23 +1,21 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-   timeout: 30000,
+  timeout: 30000,
 });
 
 axiosInstance.interceptors.request.use(
-   (config) => {
-      const githubToken =
-         process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+  (config) => {
+    const githubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
-      if (githubToken) {
-         config.headers.Authorization =
-            `Bearer ${githubToken}`;
-      }
+    if (githubToken) {
+      config.headers.Authorization = `Bearer ${githubToken}`;
+    }
 
-      return config;
-   },
+    return config;
+  },
 
-   (error) => Promise.reject(error),
+  (error) => Promise.reject(error),
 );
 
 export default axiosInstance;
