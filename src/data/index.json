@@ -444,6 +444,13 @@
       "githubPath": "5 - OOP MVC/4 - Study Case MVC"
     },
     {
+      "id": "5---oop-mvc-5---mvc-advanced",
+      "slug": "5---oop-mvc-5---mvc-advanced",
+      "title": "5 - MVC Advanced",
+      "programSlug": "5---oop-mvc",
+      "githubPath": "5 - OOP MVC/5 - MVC Advanced"
+    },
+    {
       "id": "6---web-design-1---pengenalan-web-design-html-dan-css",
       "slug": "6---web-design-1---pengenalan-web-design-html-dan-css",
       "title": "1 - Pengenalan Web Design HTML dan CSS",
@@ -2442,6 +2449,286 @@
       "programSlug": "4---typescript",
       "moduleSlug": "4---typescript-9---enum-dan-utility-types",
       "githubPath": "4 - TypeScript/9 - Enum dan Utility Types/assignments/String Enum"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-class-dengan-banyak-method-saling-terkait",
+      "slug": "5---oop-mvc-1---pengenalan-oop-class-dengan-banyak-method-saling-terkait",
+      "title": "Class dengan Banyak Method Saling Terkait",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Class dengan Banyak Method Saling Terkait"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-default-value-pada-constructor",
+      "slug": "5---oop-mvc-1---pengenalan-oop-default-value-pada-constructor",
+      "title": "Default Value pada Constructor",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Default Value pada Constructor"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-getter-dan-setter",
+      "slug": "5---oop-mvc-1---pengenalan-oop-getter-dan-setter",
+      "title": "Getter dan Setter",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Getter dan Setter"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-membuat-class-sederhana",
+      "slug": "5---oop-mvc-1---pengenalan-oop-membuat-class-sederhana",
+      "title": "Membuat Class Sederhana",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Membuat Class Sederhana"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-method-dalam-class",
+      "slug": "5---oop-mvc-1---pengenalan-oop-method-dalam-class",
+      "title": "Method dalam Class",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Method dalam Class"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-method-dengan-parameter",
+      "slug": "5---oop-mvc-1---pengenalan-oop-method-dengan-parameter",
+      "title": "Method dengan Parameter",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Method dengan Parameter"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-multiple-object-dari-class-yang-sama",
+      "slug": "5---oop-mvc-1---pengenalan-oop-multiple-object-dari-class-yang-sama",
+      "title": "Multiple Object dari Class yang Sama",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Multiple Object dari Class yang Sama"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-property-dan-constructor",
+      "slug": "5---oop-mvc-1---pengenalan-oop-property-dan-constructor",
+      "title": "Property dan Constructor",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Property dan Constructor"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-static-method",
+      "slug": "5---oop-mvc-1---pengenalan-oop-static-method",
+      "title": "Static Method",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/Static Method"
+    },
+    {
+      "id": "5---oop-mvc-1---pengenalan-oop-this-keyword-dalam-method",
+      "slug": "5---oop-mvc-1---pengenalan-oop-this-keyword-dalam-method",
+      "title": "this Keyword dalam Method",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-1---pengenalan-oop",
+      "githubPath": "5 - OOP MVC/1 - Pengenalan OOP/assignments/this Keyword dalam Method"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-abstraksi-sederhana-dengan-method-umum",
+      "slug": "5---oop-mvc-2---teori-oop-abstraksi-sederhana-dengan-method-umum",
+      "title": "Abstraksi Sederhana dengan Method Umum",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Abstraksi Sederhana dengan Method Umum"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-constructor-dengan-super",
+      "slug": "5---oop-mvc-2---teori-oop-constructor-dengan-super",
+      "title": "Constructor dengan super()",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Constructor dengan super()"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-enkapsulasi-dengan-private-field",
+      "slug": "5---oop-mvc-2---teori-oop-enkapsulasi-dengan-private-field",
+      "title": "Enkapsulasi dengan Private Field",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Enkapsulasi dengan Private Field"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-enkapsulasi-dengan-validasi",
+      "slug": "5---oop-mvc-2---teori-oop-enkapsulasi-dengan-validasi",
+      "title": "Enkapsulasi dengan Validasi",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Enkapsulasi dengan Validasi"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-gettersetter-untuk-enkapsulasi",
+      "slug": "5---oop-mvc-2---teori-oop-gettersetter-untuk-enkapsulasi",
+      "title": "GetterSetter untuk Enkapsulasi",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/GetterSetter untuk Enkapsulasi"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-inheritance-bertingkat",
+      "slug": "5---oop-mvc-2---teori-oop-inheritance-bertingkat",
+      "title": "Inheritance Bertingkat",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Inheritance Bertingkat"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-inheritance-sederhana",
+      "slug": "5---oop-mvc-2---teori-oop-inheritance-sederhana",
+      "title": "Inheritance Sederhana",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Inheritance Sederhana"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-kombinasi-4-pilar-oop",
+      "slug": "5---oop-mvc-2---teori-oop-kombinasi-4-pilar-oop",
+      "title": "Kombinasi 4 Pilar OOP",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Kombinasi 4 Pilar OOP"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-method-overriding",
+      "slug": "5---oop-mvc-2---teori-oop-method-overriding",
+      "title": "Method Overriding",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Method Overriding"
+    },
+    {
+      "id": "5---oop-mvc-2---teori-oop-polimorfisme-dengan-banyak-class",
+      "slug": "5---oop-mvc-2---teori-oop-polimorfisme-dengan-banyak-class",
+      "title": "Polimorfisme dengan Banyak Class",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-2---teori-oop",
+      "githubPath": "5 - OOP MVC/2 - Teori OOP/assignments/Polimorfisme dengan Banyak Class"
+    },
+    {
+      "id": "5---oop-mvc-3---pengenalan-mvc-controller-penghubung-dengan-argument-cli",
+      "slug": "5---oop-mvc-3---pengenalan-mvc-controller-penghubung-dengan-argument-cli",
+      "title": "Controller Penghubung dengan Argument CLI",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-3---pengenalan-mvc",
+      "githubPath": "5 - OOP MVC/3 - Pengenalan MVC/assignments/Controller Penghubung dengan Argument CLI"
+    },
+    {
+      "id": "5---oop-mvc-3---pengenalan-mvc-mini-cli-manajemen-produk-dengan-multiple-command",
+      "slug": "5---oop-mvc-3---pengenalan-mvc-mini-cli-manajemen-produk-dengan-multiple-command",
+      "title": "Mini CLI Manajemen Produk dengan Multiple Command",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-3---pengenalan-mvc",
+      "githubPath": "5 - OOP MVC/3 - Pengenalan MVC/assignments/Mini CLI Manajemen Produk dengan Multiple Command"
+    },
+    {
+      "id": "5---oop-mvc-3---pengenalan-mvc-model-produk-dari-argument-cli",
+      "slug": "5---oop-mvc-3---pengenalan-mvc-model-produk-dari-argument-cli",
+      "title": "Model Produk dari Argument CLI",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-3---pengenalan-mvc",
+      "githubPath": "5 - OOP MVC/3 - Pengenalan MVC/assignments/Model Produk dari Argument CLI"
+    },
+    {
+      "id": "5---oop-mvc-3---pengenalan-mvc-validasi-command-dan-params-di-controller",
+      "slug": "5---oop-mvc-3---pengenalan-mvc-validasi-command-dan-params-di-controller",
+      "title": "Validasi Command dan Params di Controller",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-3---pengenalan-mvc",
+      "githubPath": "5 - OOP MVC/3 - Pengenalan MVC/assignments/Validasi Command dan Params di Controller"
+    },
+    {
+      "id": "5---oop-mvc-3---pengenalan-mvc-view-untuk-menampilkan-data-dari-argument",
+      "slug": "5---oop-mvc-3---pengenalan-mvc-view-untuk-menampilkan-data-dari-argument",
+      "title": "View untuk Menampilkan Data dari Argument",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-3---pengenalan-mvc",
+      "githubPath": "5 - OOP MVC/3 - Pengenalan MVC/assignments/View untuk Menampilkan Data dari Argument"
+    },
+    {
+      "id": "5---oop-mvc-4---study-case-mvc-controller-menambah-transaksi-via-argument",
+      "slug": "5---oop-mvc-4---study-case-mvc-controller-menambah-transaksi-via-argument",
+      "title": "Controller Menambah Transaksi via Argument",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-4---study-case-mvc",
+      "githubPath": "5 - OOP MVC/4 - Study Case MVC/assignments/Controller Menambah Transaksi via Argument"
+    },
+    {
+      "id": "5---oop-mvc-4---study-case-mvc-mini-cli-aplikasi-keuangan-dengan-validasi-lengkap",
+      "slug": "5---oop-mvc-4---study-case-mvc-mini-cli-aplikasi-keuangan-dengan-validasi-lengkap",
+      "title": "Mini CLI Aplikasi Keuangan dengan Validasi Lengkap",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-4---study-case-mvc",
+      "githubPath": "5 - OOP MVC/4 - Study Case MVC/assignments/Mini CLI Aplikasi Keuangan dengan Validasi Lengkap"
+    },
+    {
+      "id": "5---oop-mvc-4---study-case-mvc-model-transaksi-dari-argument-cli",
+      "slug": "5---oop-mvc-4---study-case-mvc-model-transaksi-dari-argument-cli",
+      "title": "Model Transaksi dari Argument CLI",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-4---study-case-mvc",
+      "githubPath": "5 - OOP MVC/4 - Study Case MVC/assignments/Model Transaksi dari Argument CLI"
+    },
+    {
+      "id": "5---oop-mvc-4---study-case-mvc-validasi-command-dan-params-untuk-hitung-saldo",
+      "slug": "5---oop-mvc-4---study-case-mvc-validasi-command-dan-params-untuk-hitung-saldo",
+      "title": "Validasi Command dan Params untuk Hitung Saldo",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-4---study-case-mvc",
+      "githubPath": "5 - OOP MVC/4 - Study Case MVC/assignments/Validasi Command dan Params untuk Hitung Saldo"
+    },
+    {
+      "id": "5---oop-mvc-4---study-case-mvc-view-transaksi-dari-argument",
+      "slug": "5---oop-mvc-4---study-case-mvc-view-transaksi-dari-argument",
+      "title": "View Transaksi dari Argument",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-4---study-case-mvc",
+      "githubPath": "5 - OOP MVC/4 - Study Case MVC/assignments/View Transaksi dari Argument"
+    },
+    {
+      "id": "5---oop-mvc-5---mvc-advanced-booking-tiket-bioskop-interaktif",
+      "slug": "5---oop-mvc-5---mvc-advanced-booking-tiket-bioskop-interaktif",
+      "title": "Booking Tiket Bioskop Interaktif",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-5---mvc-advanced",
+      "githubPath": "5 - OOP MVC/5 - MVC Advanced/assignments/Booking Tiket Bioskop Interaktif"
+    },
+    {
+      "id": "5---oop-mvc-5---mvc-advanced-kuis-interaktif-dengan-skor-dan-level",
+      "slug": "5---oop-mvc-5---mvc-advanced-kuis-interaktif-dengan-skor-dan-level",
+      "title": "Kuis Interaktif dengan Skor dan Level",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-5---mvc-advanced",
+      "githubPath": "5 - OOP MVC/5 - MVC Advanced/assignments/Kuis Interaktif dengan Skor dan Level"
+    },
+    {
+      "id": "5---oop-mvc-5---mvc-advanced-manajemen-perpustakaan-dengan-denda-keterlambatan",
+      "slug": "5---oop-mvc-5---mvc-advanced-manajemen-perpustakaan-dengan-denda-keterlambatan",
+      "title": "Manajemen Perpustakaan dengan Denda Keterlambatan",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-5---mvc-advanced",
+      "githubPath": "5 - OOP MVC/5 - MVC Advanced/assignments/Manajemen Perpustakaan dengan Denda Keterlambatan"
+    },
+    {
+      "id": "5---oop-mvc-5---mvc-advanced-sistem-antrian-rumah-sakit-dengan-prioritas",
+      "slug": "5---oop-mvc-5---mvc-advanced-sistem-antrian-rumah-sakit-dengan-prioritas",
+      "title": "Sistem Antrian Rumah Sakit dengan Prioritas",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-5---mvc-advanced",
+      "githubPath": "5 - OOP MVC/5 - MVC Advanced/assignments/Sistem Antrian Rumah Sakit dengan Prioritas"
+    },
+    {
+      "id": "5---oop-mvc-5---mvc-advanced-sistem-parkir-dengan-tarif-bertingkat",
+      "slug": "5---oop-mvc-5---mvc-advanced-sistem-parkir-dengan-tarif-bertingkat",
+      "title": "Sistem Parkir dengan Tarif Bertingkat",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-5---mvc-advanced",
+      "githubPath": "5 - OOP MVC/5 - MVC Advanced/assignments/Sistem Parkir dengan Tarif Bertingkat"
     }
   ],
   "resources": [
@@ -2930,6 +3217,15 @@
       "moduleSlug": "5---oop-mvc-4---study-case-mvc",
       "githubPath": "5 - OOP MVC/4 - Study Case MVC/resources/README.md",
       "downloadUrl": "https://raw.githubusercontent.com/PrivateStack-TownHall/Syllabus/master/5%20-%20OOP%20MVC/4%20-%20Study%20Case%20MVC/resources/README.md"
+    },
+    {
+      "id": "5---oop-mvc5---mvc-advancedresourcesreadmemd",
+      "slug": "5---oop-mvc5---mvc-advancedresourcesreadmemd",
+      "title": "README.md",
+      "programSlug": "5---oop-mvc",
+      "moduleSlug": "5---oop-mvc-5---mvc-advanced",
+      "githubPath": "5 - OOP MVC/5 - MVC Advanced/resources/README.md",
+      "downloadUrl": "https://raw.githubusercontent.com/PrivateStack-TownHall/Syllabus/master/5%20-%20OOP%20MVC/5%20-%20MVC%20Advanced/resources/README.md"
     },
     {
       "id": "6---web-design1---pengenalan-web-design-html-dan-cssresourcesreadmemd",
